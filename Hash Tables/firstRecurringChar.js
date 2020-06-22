@@ -12,13 +12,13 @@
 // solving with hash map
 const findFirstRecur = input => {
   let result; 
-  let map = {}
+  let map = new Map()
 
   for (let i=0; i < input.length; i++) {
-    if (!!map[input[i]] === true) {
+    if (!!map.get(input[i]) === true) {
       return input[i]
     } 
-    map[input[i]] = input[i]
+    map.set(input[i], input[i])
   }
   return undefined
 }
